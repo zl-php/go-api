@@ -26,17 +26,23 @@ type TrackedErrorResponse struct {
 	TrackID string `json:"track_id"`
 }
 
-// DataList 带有总数的Data结构
-type DataList struct {
+//TokenData 带有token的Data结构
+type TokenData struct {
+	User  interface{} `json:"user"`
+	Token string      `json:"token"`
+}
+
+// 带有总数的Data结构
+type ListData struct {
 	List  interface{} `json:"list"`
 	Total uint        `json:"total"`
 }
 
-// BulidListResponse 带有总数的列表构建器
-func BuildListResponse(items interface{}, total uint) Response {
+// 带有总数的列表构建器
+func ListTotalData(items interface{}, total uint) Response {
 	return Response{
 		ErrCode: 0,
-		Data: DataList{
+		Data: ListData{
 			List:  items,
 			Total: total,
 		},

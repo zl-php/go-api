@@ -3,8 +3,7 @@ Tag:
   min: "长度小于规定的字符数"
   max: "长度大于规定的字符数"
 Field:
-  Appid: "appid"
-  Starttime: "查询开始时间"
-  Endtime: "查询结束时间"
-  Workid: "workid"
-  Sign: "签名"
+  UserName: "用户名"
+  Password: "密码"
+  PasswordConfirm: "确认密码"
+  Nickname: "昵称"

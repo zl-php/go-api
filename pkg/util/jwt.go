@@ -10,13 +10,13 @@ import (
 var jwtSecret = []byte(os.Getenv("JWT_SECRET"))
 
 type CustomClaims struct {
-	UserId   string `json:"user_id"`
-	UserName string `json:"username"`
+	UserId   uint   `json:"user_id"`
+	UserName string `json:"user_name"`
 	jwt.StandardClaims
 }
 
 // 生成jwt
-func GenerateToken(userId string, userName string) (string, error) {
+func GenerateToken(userId uint, userName string) (string, error) {
 
 	nowTime := time.Now()
 	expireTime := nowTime.Add(24 * time.Hour)
@@ -27,7 +27,7 @@ func GenerateToken(userId string, userName string) (string, error) {
 		jwt.StandardClaims{
 			ExpiresAt: expireTime.Unix(), // 过期时间戳
 			IssuedAt:  nowTime.Unix(),    //当前时间戳
-			Issuer:    "goapiGame",
+			Issuer:    "go_api",
 		},
 	}
 

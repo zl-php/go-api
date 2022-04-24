@@ -16,15 +16,14 @@ func SetupRouter() *gin.Engine {
 	// 路由
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("checkin/get", api.GetCheckinList)
+		v1.POST("user/register", api.UserRegister)
+		v1.POST("user/login", api.UserLogin)
 		v1.GET("redis/test", api.RedisTest)
-		v1.GET("jwt/create", api.CreateToken)
-		v1.GET("jwt/update", api.UpdateToken)
 
 		auth := v1.Group("/")
 		auth.Use(middleware.AuthRequired())
 		{
-			auth.GET("jwt/check", api.CheckToken)
+			auth.GET("user/info", api.GetUserInfo)
 		}
 	}
 

@@ -52,5 +52,5 @@ func Mysql(connString string) {
 	DB = db
 
 	// 迁移数据库
-	//migration()
+	migration()
 }
