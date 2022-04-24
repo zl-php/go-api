@@ -27,7 +27,7 @@ func GenerateToken(userId string, userName string) (string, error) {
 		jwt.StandardClaims{
 			ExpiresAt: expireTime.Unix(), // 过期时间戳
 			IssuedAt:  nowTime.Unix(),    //当前时间戳
-			Issuer:    "LongTuGame",
+			Issuer:    "goapiGame",
 		},
 	}
 

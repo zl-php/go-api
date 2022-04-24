@@ -3,9 +3,9 @@ package config
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"longtu/cache"
-	"longtu/model"
-	"longtu/pkg/util"
+	"goapi/cache"
+	"goapi/model"
+	"goapi/pkg/util"
 	"os"
 )
 

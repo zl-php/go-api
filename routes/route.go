@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"longtu/api"
-	"longtu/middleware"
+	"goapi/api"
+	"goapi/middleware"
 )
 
 func SetupRouter() *gin.Engine {

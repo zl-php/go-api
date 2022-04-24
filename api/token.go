@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"longtu/pkg/util"
+	"goapi/pkg/util"
 )
 
 func CreateToken(ctx *gin.Context) {

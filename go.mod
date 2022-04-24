@@ -1,4 +1,4 @@
-module longtu
+module goapi
 
 go 1.16
 

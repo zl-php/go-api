@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"longtu/pkg/util"
+	"goapi/pkg/util"
 	"time"
 )
 

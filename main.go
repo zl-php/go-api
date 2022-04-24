@@ -1,8 +1,8 @@
 package main
 
 import (
-	"longtu/config"
-	"longtu/routes"
+	"goapi/config"
+	"goapi/routes"
 	"os"
 )
 

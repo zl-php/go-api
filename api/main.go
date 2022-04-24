@@ -3,8 +3,8 @@ package api
 import (
 	"encoding/json"
 	"fmt"
-	"longtu/config"
-	"longtu/serializer"
+	"goapi/config"
+	"goapi/serializer"
 
 	"github.com/gin-gonic/gin"
 	validator "github.com/go-playground/validator/v10"

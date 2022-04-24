@@ -1,9 +1,9 @@
 package services
 
 import (
-	"longtu/model"
-	"longtu/pkg/util"
-	"longtu/serializer"
+	"goapi/model"
+	"goapi/pkg/util"
+	"goapi/serializer"
 	"strconv"
 )
 
