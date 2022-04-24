@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  go_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: "go_app"
+    container_name: "go_app"
+    ports:
+      - "8888:8888"
+    depends_on:
+      - redis
+    links:
+      - redis
+    volumes:
+      - "/home/go/logs:/var/www/html/logs"
+      - "/etc/localtime:/etc/localtime"
+
+  redis:
+    image: "redis:alpine"
+    container_name: "go_redis"
+    restart: unless-stopped
+    volumes:
+      - "/home/go/redis:/data"
+      - "/etc/localtime:/etc/localtime"

@@ -1,0 +1,10 @@
+Tag:
+  required: "不能为空"
+  min: "长度小于规定的字符数"
+  max: "长度大于规定的字符数"
+Field:
+  Appid: "appid"
+  Starttime: "查询开始时间"
+  Endtime: "查询结束时间"
+  Workid: "workid"
+  Sign: "签名"
