@@ -24,6 +24,7 @@ func SetupRouter() *gin.Engine {
 		auth.Use(middleware.AuthRequired())
 		{
 			auth.GET("user/info", api.GetUserInfo)
+			auth.POST("user/update", api.UserUpdate)
 		}
 	}
 

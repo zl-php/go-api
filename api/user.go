@@ -39,3 +39,16 @@ func GetUserInfo(c *gin.Context) {
 		}
 	}
 }
+
+// 用户退出
+func UserUpdate(c *gin.Context) {
+	if userId, _ := c.Get("user_id"); userId != nil {
+		var service services.UserUpdateService
+		if err := c.ShouldBind(&service); err == nil {
+			res := service.Update(userId)
+			c.JSON(200, res)
+		} else {
+			c.JSON(200, ErrorResponse(err))
+		}
+	}
+}
